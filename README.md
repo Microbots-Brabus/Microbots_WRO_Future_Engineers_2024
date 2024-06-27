@@ -1,9 +1,10 @@
 Engineering materials
 ====
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
+This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2024.
 
 ## Content
+this is information about our participate in WRO , there is pictures , videos , some resources for our design and the code . 
 
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
@@ -15,12 +16,63 @@ This repository contains engineering materials of a self-driven vehicle's model 
 
 ## Introduction
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+Welcome to the WRO Future Engineers competition! In this exciting challenge, participants aged 15 to 19 will design and build a self-driving vehicle model. The goal is to create a car equipped with electromechanical components that can autonomously navigate a track while avoiding obstacles. Let's delve into the key aspects of our project.
 
-## How to prepare the repo based on the template
+## The car's design features include:
 
-_Remove this section before the first commit to the repository_
+- **Ackermann steering**: It is a geometric arrangement in the car's steering system that addresses the issue of wheels tracing different radii circles on turns.
+- **Gearbox**: This component converts the brushless motor's speed into torque.
+- **Wheels and gears**: Designed using SolidWorks and produced through 3D printing.
 
-1. Clone this repo by using the `git clone` functionality.
-2. Remove `.git` directory
-3. [Initialize a new public repository on GitHub](https://github.com/new) by following instructions from "create a new repository on the command line" section (appeared after pressing "Create repository" button).
+These elements combine to ensure excellent maneuverability and performance on the road. The meticulous design process, from Ackermann steering to gearbox conversion, reflects a dedication to efficiency and innovation. The utilization of SolidWorks for the design of wheels and gears, along with advanced 3D printing, results in a product that pushes the boundaries of automotive engineering. Each part working in unison provides a driving experience that is not only smooth and controlled but also demonstrates the capabilities of modern manufacturing techniques.
+
+## Components Used
+
+### 1. Time-of-Flight (ToF) Sensors
+
+- **Purpose**: To measure distances by emitting light and calculating the time it takes for the light to bounce back from an object.
+- **Functions**:
+    - `setID()`: Initializes or configures the ToF sensor.
+    - `read_tof_R1()`: Reads values from the first right ToF sensor.
+    - `read_tof_R2()`: Reads values from the second right ToF sensor.
+    - `read_tof_L1()`: Reads values from the first left ToF sensor.
+    - `read_tof_L2()`: Reads values from the second left ToF sensor.
+    - `read_tof_f()`: Reads values from the front ToF sensor.
+
+### 2. Gyro Sensor (Motion Processing Unit - MPU)
+
+- **Purpose**: Provides information about orientation, acceleration, and rotation.
+- **Functions**:
+    - `mpu_setup()`: Configures the MPU sensor during setup.
+    - `mpu_loop()`: Processes data from the MPU sensor in the main loop.
+    - `calibrateGyro()`: Calibrates the gyro sensor to ensure accurate readings.
+    - `P_id_gyro()`: Applies a PID controller using gyro data for stabilization.
+
+### 3. Ultra Sonic Sensor
+-`ultra_sonic_R()` :
+Processes data from the right Ultrasonic sensor in the main loop.
+-`ultra_sonic_L()` :
+Processes data from the left Ultrasonic sensor in the main loop.
+
+### 4. Servo Motor
+- There is some commands to configures the servo motor during setup.
+- in the loop the servo will do it's assignment to turn right or left .
+
+### 5. Brushless Motor
+- There is some commands to configures the brushless motor during setup.
+
+## Code Structure
+
+1. **Libraries**: Import necessary libraries (e.g., Arduino, sensor libraries).
+2. **Objects**: Define any objects (e.g., motor objects).
+3. **Variables**: Declare global variables (e.g., sensor readings, motor speeds).
+4. **Functions**:
+    - Implement functions for each component (e.g., ToF sensors, gyro, ultrasonic).
+    - Organize code for readability and modularity.
+5. **void setup()**:
+    - Initialize components (e.g., sensors, motors).
+    - Set initial conditions.
+6. **void loop()**:
+    - Continuously read sensor data.
+    - Apply control algorithms (e.g., PID) for autonomous navigation.
+    - Avoid obstacles based on sensor inputs.
