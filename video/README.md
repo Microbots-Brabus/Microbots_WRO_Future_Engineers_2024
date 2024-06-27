@@ -1,5 +1,3 @@
-Video
-====
 
-This directory must contain the video.md file with a URL to YouTube (should be either public or accessible by link) showing the vehicle driving autonomously.
-That part of the video where driving demonstration exists must be at least 30 seconds in length.
+https://github.com/Microbots-Brabus/Microbots_WRO_Future_Engineers_2024/assets/173537816/cf78a59b-3da8-44d0-857e-bc716cceab71
+
