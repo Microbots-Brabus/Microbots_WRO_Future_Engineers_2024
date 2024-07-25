@@ -28,16 +28,34 @@ These elements combine to ensure excellent maneuverability and performance on th
 
 ## Components Used
 
-### 1. Time-of-Flight (ToF) Sensors
+### 1. Ultra Sonic Sensors
 
-- **Purpose**: To measure distances by emitting light and calculating the time it takes for the light to bounce back from an object.
+- **Purpose**: To measure distances by emitting ultrasonic sound waves and measuring the time it takes for the waves to reflect back after hitting an object.
+
+- **define the sensors**:
+- ----------------------
+#define TRIGGER_PIN_R1 52  // first right sensor 
+#define ECHO_PIN_R1 A14
+
+#define TRIGGER_PIN_L1 20  // first left sensor 
+#define ECHO_PIN_L1 A0
+
+#define TRIGGER_PIN_R2 50  // second right sensor 
+#define ECHO_PIN_R2 A13
+
+#define TRIGGER_PIN_L2 40 //// second left sensor 
+#define ECHO_PIN_L2 A15
+
+#define TRIGGER_PIN_F 46   //// front sensor 
+#define ECHO_PIN_F A11
+
 - **Functions**:
-    - `setID()`: Initializes or configures the ToF sensor.
-    - `read_tof_R1()`: Reads values from the first right ToF sensor.
-    - `read_tof_R2()`: Reads values from the second right ToF sensor.
-    - `read_tof_L1()`: Reads values from the first left ToF sensor.
-    - `read_tof_L2()`: Reads values from the second left ToF sensor.
-    - `read_tof_f()`: Reads values from the front ToF sensor.
+    - `sensor()`: it measure distancees and assigning values ​​to variables.
+L1 = sonar_L1.ping_cm(); //read the distance from all ultra sonic sensors
+L2 = sonar_L2.ping_cm();
+R1 = sonar_R1.ping_cm();
+R2 = sonar_R2.ping_cm();
+F = sonar_F.ping_cm();
 
 ### 2. Gyro Sensor (Motion Processing Unit - MPU)
 
@@ -48,18 +66,11 @@ These elements combine to ensure excellent maneuverability and performance on th
     - `calibrateGyro()`: Calibrates the gyro sensor to ensure accurate readings.
     - `P_id_gyro()`: Applies a PID controller using gyro data for stabilization.
 
-### 3. Ultra Sonic Sensor
--`ultra_sonic_R()` :
-Processes data from the right Ultrasonic sensor in the main loop.
-
--`ultra_sonic_L()` :
-Processes data from the left Ultrasonic sensor in the main loop.
-
-### 4. Servo Motor
+### 3. Servo Motor
 - There is some commands to configures the servo motor during setup.
 - in the loop the servo will do it's assignment to turn right or left .
 
-### 5. Brushless Motor
+### 4. Brushless Motor
 - There is some commands to configures the brushless motor during setup.
 
 ## Code Structure
