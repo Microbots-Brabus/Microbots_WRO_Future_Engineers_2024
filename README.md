@@ -6,7 +6,7 @@ This repository contains engineering materials of a self-driven vehicle's model 
 ## Content
 this is information about our participate in WRO , there is pictures , videos , some resources for our design and the code . 
 
-  `Obstacles Challenge` contains the video of Obstacles Challenge and the link of the video on our team's YouTube Channel 
+* `Obstacles Challenge` contains the video of Obstacles Challenge and the link of the video on our team's YouTube Channel 
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
 * `video` contains the video of Open Challenge and the link of the video on our team's YouTube Channel 
