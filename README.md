@@ -79,7 +79,7 @@ F = sonar_F.ping_cm();
 2. **Objects**: Define any objects (e.g., motor objects).
 3. **Variables**: Declare global variables (e.g., sensor readings, motor speeds).
 4. **Functions**:
-    - Implement functions for each component (e.g., ToF sensors, gyro, ultrasonic).
+    - Implement functions for each component (e.g., gyro, ultrasonic).
     - Organize code for readability and modularity.
 5. **void setup()**:
     - Initialize components (e.g., sensors, motors).
